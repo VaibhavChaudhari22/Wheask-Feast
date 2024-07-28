@@ -40,9 +40,7 @@ module.exports.createListing = async (req, res, next) => {
         const newListing = new Listing(req.body.listing);
         newListing.owner = req.user._id;
         newListing.image = { url, filename };
-        
-        // newListing.geometry = response.body.features[0].geometry;
-         
+                 
         let savedListing= await newListing.save();
         console.log(savedListing);
         req.flash("success", "New Recipe created!");
@@ -70,7 +68,7 @@ module.exports.updateListing = async (req, res, next) => {
         const { id } = req.params;
         const updateData = { ...req.body.listing };
 
-        // Fetch the existing listing
+        // Fetch existing listing
         const existingListing = await Listing.findById(id);
 
         if (!existingListing) {

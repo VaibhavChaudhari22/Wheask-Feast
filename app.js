@@ -17,7 +17,6 @@ const LocalStrategy= require("passport-local")
 const User= require("./models/user.js")
 
 
-
 const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review")
 const userRouter = require("./routes/user.js");
@@ -38,7 +37,6 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate); 
 app.use(express.static(path.join(__dirname, "/public")));
-
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
@@ -91,7 +89,6 @@ app.use((req,res,next)=>{
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter)
 app.use("/",userRouter);
-
 
 
 app.all("*", (req, res, next) => {

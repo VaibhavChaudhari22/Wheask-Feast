@@ -39,10 +39,4 @@ router
 
 router.get('/:id/edit', isLoggedIn, isOwner, wrapAsync(listingController.renderEditForm));
 
-// Route to search listings
-
-
-
-
-
 module.exports=router;

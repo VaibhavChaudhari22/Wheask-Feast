@@ -35,7 +35,7 @@ const listingSchema = new Schema({
     },
     owner: {
         type: Schema.Types.ObjectId,
-        ref: "user", // assuming the model name for the user is "user"
+        ref: "user", 
         required: true,
     },
     categories: {
