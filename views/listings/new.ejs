@@ -1,0 +1,104 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row offset-1 ">
+        <div class="col-8">
+
+    <br>
+    <h3>create new listing</h3>
+   <form method="post" action="/listings"  novalidate class="needs-validation" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+        <div class="valid-feedback">Title look good!</div>
+        <div class="invalid-feedback">Title required</div>
+
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file" name="listing[image]" class="form-control" required>
+
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Filename</label>
+        <input type="text" name="listing[image][filename]" class="form-control" required>
+
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea type="text" name="listing[description]"  class="form-control" required></textarea>
+        <div class="invalid-feedback">short description required</div>
+      </div>
+      
+      
+        <div class="mb-3 col-md-4" >
+        <label for="ingredients" class="form-label">Ingredients</label>
+        <textarea type="text" name="listing[ingredients]"  class="form-control" required></textarea>
+        <div class="invalid-feedback">Ingredients is required</div>
+      </div>
+      <div class="mb-3 col-md-8">
+        <label for="steps" class="form-label">Recipe</label>
+        <textarea type="text" name="listing[steps]"  class="form-control" required></textarea>
+        <div class="invalid-feedback">Recipe is required</div>
+      </div>
+    
+      <div class="form-group">
+        <label for="listing[categories]">Categories</label><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Trending" name="listing[categories][]" value="Trending">
+            <label class="form-check-label" for="Trending">Trending</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Vegetarian" name="listing[categories][]" value="Vegetarian">
+            <label class="form-check-label" for="Vegetarian">Vegetarian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Non-Vegetarian" name="listing[categories][]" value="Non-Vegetarian">
+            <label class="form-check-label" for="Non-Vegetarian">Non-Vegetarian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Indian" name="listing[categories][]" value="Indian">
+            <label class="form-check-label" for="Indian">Indian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Italian" name="listing[categories][]" value="Italian">
+            <label class="form-check-label" for="Italian">Italian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Western" name="listing[categories][]" value="Western">
+            <label class="form-check-label" for="Western">Western</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Maharashtrian" name="listing[categories][]" value="Maharashtrian">
+            <label class="form-check-label" for="Maharashtrian">Maharashtrian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="South Indian" name="listing[categories][]" value="South Indian">
+            <label class="form-check-label" for="South Indian">South Indian</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Dessert" name="listing[categories][]" value="Dessert">
+            <label class="form-check-label" for="Dessert">Dessert</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="Coffee" name="listing[categories][]" value="Coffee">
+            <label class="form-check-label" for="Coffee">Coffee</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="salad" name="listing[categories][]" value="salad">
+            <label class="form-check-label" for="salad">salad</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Breakfast" name="listing[categories][]" value="Breakfast">
+          <label class="form-check-label" for="Breakfast">Breakfast</label>
+      </div>
+    </div>
+    
+    <button class="btn btn-dark add-btn" >Add</button>
+    <br><br/>
+
+</div>
+</div>
+</form>
+   
+</body>

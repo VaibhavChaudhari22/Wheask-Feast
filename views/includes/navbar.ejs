@@ -1,0 +1,76 @@
+<style>
+    .search-btn{
+      background-color: #ff385c;
+      color: white;
+      border-radius: 25px;
+      padding: 0 1rem 0 1rem;
+    }
+    .search-btn:hover{
+      background-color: #ff385c;
+      color: white;
+    }
+    .search-btn i{
+      display: inline;
+      margin-right: 0.5rem;
+    }
+    .search-inp{
+      border-radius: 25px;
+      padding: 0.5rem 2rem 0.5rem 3rem;
+      font-size: o.8rem;
+    }
+    .navbar-brand .logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      /* Replace with your preferred font */
+  font-size: 18px; /* Adjust as needed */
+  font-weight: bold;
+  color: #222222; /* Adjust as needed */
+}
+
+.navbar-brand .ampersand {
+  font-family: 'Courier New', cursive; /* Replace with a different font if you want a different style for the ampersand */
+  font-size: 2rem;
+  color: #ff385c; /* Adjust color as needed */
+}
+
+  </style>
+  
+  <nav class="navbar navbar-expand-md bg-body-white bottom border sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/listings"><i class="fa-solid fa-utensils"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link navbar-brand" href="/listings">
+              <span class="logo-text">Wheask<span class="ampersand">&amp;</span>Feast</span>
+            </a>
+          </div>
+          
+          <div class="navbar-nav ms-auto">
+            <form class="d-flex" role="search" method="GET" action="/listings/search">
+              <input class="form-control me-2 search-inp" type="search" name="q" placeholder="Search Your Feast!" aria-label="Search">
+              <button class="btn search-btn" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>Search
+              </button>
+          </form>
+        </div>
+        
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/listings/new">Add new Recipe</a>
+
+  
+            <% if(!currUser){ %>
+              <a class="nav-link" href="/signup"><b>SignUp</b></a>
+              <a class="nav-link" href="/login"><b>Login</b></a>
+              <% } %>
+              <% if(currUser){ %>
+                <a class="nav-link" href="/logout"><b>Logout</b></a>
+                <% } %>
+            
+            
+  
+          </div>
+        </div>
+      </div>
+    </nav>

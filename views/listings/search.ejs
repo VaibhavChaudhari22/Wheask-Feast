@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="container">
+        <h3>Search Results</h3>
+
+        <!-- Search Form -->
+        
+
+        <!-- Display Listings -->
+        <% if (results.length > 0) { %>
+            <% results.forEach(result => { %>
+                <div class="listing mb-3">
+                    <h2><%= result.title %></h2>
+                    <p><%= result.description %></p>
+                    <a href="/listings/<%= result._id %>" class="btn btn-dark add-btn">View Recipe</a>&nbsp;&nbsp;
+                    <a href="/listings/<%= result._id %>/edit" class="btn btn-dark add-btn">Edit</a>&nbsp;&nbsp;
+                    <form action="/listings/<%= result._id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-dark btn-smr">Delete</button>
+                    </form>
+                </div>
+                <hr>
+            <% }) %>
+        <% } else { %>
+            <p>No Recipe found.</p>
+        <% } %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>

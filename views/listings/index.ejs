@@ -1,0 +1,109 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    #filters{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter{
+      text-align: center;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+    .filter:hover{
+      opacity: 1;
+      cursor: pointer;
+    }
+    .filter p{
+      font-size: 0.9rem;
+    }  
+    .filter a{
+      color: black;
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    </style>
+    
+    <div id="filters">
+        <div class="filter">
+          <a href="/listings/category/Trending">
+            <div><i class="fa-solid fa-fire"></i></div></a>
+          <p>Trending</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Vegetarian">
+          <div><i class="fa-solid fa-leaf"></i></div></a>
+          <p>Vegetarian</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Non-Vegetarian">
+          <div><i class="fa-solid fa-drumstick-bite"></i></div></a>
+          <p>Non-Vegetarian</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Indian">
+          <div><i class="fa-solid fa-indian-rupee-sign"></i></div></a>
+          <p>Indian</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Italian">
+          <div><i class="fa-solid fa-burger"></i></div></a>
+          <p>Italian</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Western">
+          <div><i class="fa-solid fa-flag-usa"></i></div></a>
+          <p>Western</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Maharashtrian">
+          <div><i class="fa-brands fa-fort-awesome"></i></div></a>
+          <p>Maharashtrian</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/South%20Indian" aria-label="Filter by South Indian">
+            <div><i class="fa-solid fa-gopuram" aria-hidden="true"></i></div></a>
+            <p>South Indian</p>
+        </div>
+        
+        <div class="filter">
+          <a href="/listings/category/Dessert">
+          <div><i class="fa-solid fa-ice-cream"></i></div></a>
+          <p>Dessert</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/Coffee">
+          <div><i class="fa-solid fa-mug-hot"></i></div></a>
+          <p>Coffee</p> 
+        </div>
+        <div class="filter">
+          <a href="/listings/category/salad">
+            <div><i class="fa-solid fa-carrot"></i></div></a>
+            <p>salad</p> 
+          </div>
+          <div class="filter">
+            <a href="/listings/category/Breakfast">
+            <div><i class="fa-solid fa-ellipsis-h"></i></div></a>
+            <p>Breakfast</p> 
+          </div>    
+    </div>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for (listing of allListings) { %>
+        <a href="/listings/<%= listing.id %>" class="listing-link">
+            <div class="card col listing-card">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing image" style="height: 20rem;">
+                <div class="card-img-overlay">The chaudhary</div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <b><%= listing.title %></b>
+                        <br>
+                       
+                    </p>
+                </div>
+            </div>
+        </a>
+    <% } %>
+</div>
