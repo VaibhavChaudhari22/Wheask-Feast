@@ -1,6 +1,6 @@
 {
-  "engines":{
-    "node":"20.11.1"
+  "engines": {
+    "node": "20.11.1"
   },
   "name": "food-reciepe-site",
   "version": "1.0.0",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "cloudinary": "^2.3.0",
+    "cloudinary": "^1.21.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
