@@ -1,3 +1,5 @@
+/* general styles */
+
 body{
     
     font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -119,60 +121,107 @@ height: 30vh;
   text-decoration: none;
 }
 
+/* Search bar */
+.search-btn {
+  background-color: #ff385c;
+  color: white;
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+}
+
+.search-btn:hover {
+  background-color: #ff385c;
+  color: white;
+}
+
+.search-btn i {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-inp {
+  border-radius: 25px;
+  padding: 0.5rem 2rem 0.5rem 3rem;
+  font-size: 0.8rem;
+}
+  
+/* website-logo */
+
+.navbar-brand .logo-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.navbar-brand .ampersand {
+  font-family: 'Courier New', cursive;
+  font-size: 2rem;
+  color: #ff385c;
+}
+
 
 /* Media Queries for Responsive Design */
 
-/* Small devices (phones, 320px and up) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .navbar {
-    height: 4rem;
-  }
-
-  .fa-utensils {
-    font-size: 1.5rem;
-  }
-
-  .f-info-socials i {
-    font-size: 1rem;
-  }
-
-  .show-img {
-    height: 20vh;
-  }
-
-  .filter {
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
+/* Tablet view */
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-  }
-
   .navbar {
-    height: 4.5rem;
+      height: auto;
+      padding: 1rem;
   }
 
-  .fa-utensils {
-    font-size: 1.75rem;
+  .navbar-brand .logo-text {
+      font-size: 16px;
   }
 
-  .f-info-socials i {
-    font-size: 1.1rem;
+  .navbar-brand .ampersand {
+      font-size: 1.5rem;
   }
 
-  .show-img {
-    height: 25vh;
+  .search-btn {
+      padding: 0 0.5rem;
+  }
+
+  .search-inp {
+      padding: 0.5rem 1rem;
+      font-size: 0.7rem;
   }
 }
 
+/* Mobile view */
+@media (max-width: 480px) {
+  .navbar {
+      height: auto;
+      padding: 0.5rem;
+  }
+
+  .navbar-brand .logo-text {
+      font-size: 14px;
+  }
+
+  .navbar-brand .ampersand {
+      font-size: 1.2rem;
+  }
+
+  .search-btn {
+      padding: 0 0.5rem;
+      font-size: 0.8rem;
+  }
+
+  .search-inp {
+      padding: 0.5rem;
+      font-size: 0.6rem;
+  }
+
+  .f-info {
+      height: auto;
+      padding: 1rem;
+  }
+
+  .card-img-top {
+      border-radius: 0.5rem !important;
+  }
+}
 /* Large devices (desktops, 1024px and up) */
 @media (max-width: 1024px) {
   body {
